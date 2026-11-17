@@ -1,0 +1,64 @@
+ALL TABLES
++----------------------+
+| Tables_in_bioprakt13 |
++----------------------+
+| alignment            |
+| alignment_seq        |
+| nucleotide_seq       |
+| protein_kw           |
+| protein_seq          |
++----------------------+
+ALIGNMENT
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| incr_key_align | int(11)      | NO   | PRI | NULL    | auto_increment |
+| family_name    | varchar(100) | YES  |     | NULL    |                |
+| family_class   | varchar(30)  | NO   |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+ALIGNMENT SEQUENCE
++---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| incr_key_align_seq  | int(11)      | NO   | PRI | NULL    | auto_increment |
+| pdb_code            | varchar(30)  | YES  |     | NULL    |                |
+| alsequence          | mediumtext   | NO   |     | NULL    |                |
+| r_faktor            | double(10,4) | YES  |     | NULL    |                |
+| resolution          | double(10,4) | YES  |     | NULL    |                |
+| method              | varchar(20)  | YES  |     | NULL    |                |
+| organism_name       | varchar(200) | YES  |     | NULL    |                |
+| protein_name        | varchar(200) | YES  |     | NULL    |                |
+| family_name         | varchar(100) | YES  |     | NULL    |                |
+| start_chain         | varchar(5)   | YES  |     | NULL    |                |
+| end_chain           | varchar(5)   | YES  |     | NULL    |                |
+| start               | int(11)      | YES  |     | NULL    |                |
+| end                 | int(11)      | YES  |     | NULL    |                |
+| secondary_structure | mediumtext   | YES  |     | NULL    |                |
+| protein_code        | varchar(20)  | YES  |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+NUCLEOTIDE SEQ
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| nseq_key  | varchar(20) | NO   | PRI | NULL    |       |
+| nsequence | mediumtext  | NO   |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+PROTEIN_KW
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| kw_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| kw     | varchar(30) | NO   |     | NULL    |                |
+| db_key | varchar(30) | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+PROTEIN_SEQ
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| incr_key_protein | int(11)      | NO   | PRI | NULL    | auto_increment |
+| organism_name    | varchar(200) | NO   |     | NULL    |                |
+| length           | int(11)      | NO   |     | NULL    |                |
+| db_source        | varchar(20)  | NO   |     | NULL    |                |
+| db_key           | varchar(30)  | NO   |     | NULL    |                |
+| psequence        | mediumtext   | NO   |     | NULL    |                |
++------------------+--------------+------+-----+---------+----------------+

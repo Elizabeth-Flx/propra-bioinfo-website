@@ -1,0 +1,26 @@
+<mat-stepper #stepper linear orientation="vertical">
+  <mat-step #selectFasta [hasError]="!($fasta | async) && selectFasta.interacted" [optional]=false
+            errorMessage="Please select a sequence file" label="Select the sequences to make predictions for">
+    <app-select-sequence [$fasta]="$fasta"></app-select-sequence>
+  </mat-step>
+  <mat-step #selectModel [hasError]="!($model | async) && selectModel.interacted" [optional]=false
+            errorMessage="Please select a model" label="Select the Type of Prediction Model you want to use.">
+    <app-select-model [$model]="$model" [$usePretrained]="$usePretrained"></app-select-model>
+  </mat-step>
+  <mat-step [editable]=false [optional]=true label="Select a Reference Structure for Validation.">
+    <app-select-reference [$fasta]="$reference"></app-select-reference>
+  </mat-step>
+  <mat-step [editable]=false label="Results">
+    <div class="flex-row">
+      <button (click)="calculate()" [disabled]="!canCalculate()" class="form-control" color="primary" mat-flat-button>
+        Calculate
+      </button>
+      <button (click)="reset(); stepper.reset();" class="form-control" color="primary" mat-flat-button>Reset</button>
+      <button (click)="showSummary(summary)" *ngIf="($result | async)?.summary as summary" class="row-end form-control"
+              color="accent"
+              mat-flat-button>Summary
+      </button>
+    </div>
+    <app-prediction-visual [$result]="$result"></app-prediction-visual>
+  </mat-step>
+</mat-stepper>

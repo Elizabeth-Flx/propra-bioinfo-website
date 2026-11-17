@@ -1,0 +1,19 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <h2>Input</h2>
+    <button class="form-control row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+  <div class="task-container" style="width: 100%">
+    <h1>Upload Training set here</h1>
+    <input (change)="fileChange($event)" formControlName="training_set" type="file">
+  </div>
+  <br>
+  <mat-form-field style="width: 300px">
+    <mat-label>Select the Version</mat-label>
+    <mat-select formControlName="version">
+      <mat-option *ngFor="let model of models" [value]="model.value">
+        {{model.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.flex-row {
+  display: flex;
+}
+
+
+textarea {
+  width: 100%;
+}
+
+.monospaced {
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.show-overflow {
+  overflow: scroll;
+}
+
+.nobr {
+  white-space: nowrap
+}
+
+.form-control {
+  margin: 10px;
+}
+
+.row-end {
+  justify-self: end;
+  margin-left: auto;
+}

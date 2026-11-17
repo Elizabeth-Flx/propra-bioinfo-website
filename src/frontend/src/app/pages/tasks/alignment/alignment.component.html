@@ -1,0 +1,31 @@
+<mat-tab-group>
+  <mat-tab label="Calculate Alignment">
+    <div class="task-container">
+      <mat-stepper orientation="vertical">
+        <mat-step [optional]=false label="Select the Protein Sequences for Alignment">
+
+          <app-alignment-sequence-select></app-alignment-sequence-select>
+
+        </mat-step>
+        <mat-step [optional]=false label="Select Alignment Algorithm & Parameters">
+
+          <app-alignment-parameters></app-alignment-parameters>
+
+        </mat-step>
+        <mat-step [editable]=true label="Your results">
+
+          <app-alignment-results></app-alignment-results>
+
+        </mat-step>
+      </mat-stepper>
+
+    </div>
+  </mat-tab>
+  <mat-tab label="Alignment Plots">
+    <app-alignment-plots></app-alignment-plots>
+  </mat-tab>
+  <mat-tab label="Recursive vs Dynamic">
+    <app-reccursive></app-reccursive>
+  </mat-tab>
+</mat-tab-group>
+

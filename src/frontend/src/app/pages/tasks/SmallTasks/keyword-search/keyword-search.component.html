@@ -1,0 +1,39 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <h1>Input</h1>
+    <button class="row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+
+  <div class="flex-row">
+    <h2 style="margin-right: 10px">Data file</h2>
+    <input (change)="fileChange($event)" formControlName="file" type="file">
+  </div>
+
+  <mat-form-field appearance="fill" class="example-chip-list" style="width: 100%">
+    <mat-label>Keywords</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Add keywords">
+      <mat-chip-row
+        (removed)="remove(keyword)"
+        *ngFor="let keyword of getKeywords()">
+        {{keyword}}
+        <button [attr.aria-label]="'remove ' + keyword" matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+      <input (matChipInputTokenEnd)="add($event)"
+             [matChipInputAddOnBlur]="true"
+             [matChipInputFor]="chipGrid"
+             placeholder="Add keywords"/>
+    </mat-chip-grid>
+  </mat-form-field>
+</form>
+<ng-container *ngIf="($output | async) as results">
+  <div class="flex-row">
+    <h1>Output</h1>
+    <button (click)="download(results, 'accessions.txt')" class="row-end" color="accent" mat-flat-button>Download
+    </button>
+  </div>
+  <div>
+    <button *ngFor="let result of results" mat-flat-button>{{result}}</button>
+  </div>
+</ng-container>

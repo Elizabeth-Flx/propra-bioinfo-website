@@ -1,0 +1,36 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <h1>Input</h1>
+    <button class="row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+
+  <mat-button-toggle-group (valueChange)="$source.next($event)">
+    <mat-button-toggle checked value="use-pattern">Use Pattern</mat-button-toggle>
+    <mat-button-toggle value="use-webid">Use webID</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-form-field *ngIf="($source | async) == 'use-pattern'" appearance="outline" style="width: 100%">
+    <mat-label>Prosite pattern</mat-label>
+    <input formControlName="pattern" matInput placeholder="Prosite pattern">
+  </mat-form-field>
+  <mat-form-field *ngIf="($source | async) == 'use-webid'" appearance="outline" style="width: 100%">
+    <mat-label>Prosite webID</mat-label>
+    <input formControlName="webId" matInput placeholder="Prosite webID">
+  </mat-form-field>
+
+  <div class="flex-row">
+    <h2 style="margin-right: 10px">Fasta file</h2>
+    <input (change)="fileChange($event)" formControlName="fasta" type="file">
+  </div>
+
+  <mat-slide-toggle color="primary" formControlName="extern">Extern</mat-slide-toggle>
+
+</form>
+<ng-container *ngIf="($output | async) as output">
+  <div class="flex-row">
+    <h1>Output</h1>
+    <button (click)="download(output)" class="row-end" color="accent" mat-flat-button>Download
+    </button>
+  </div>
+  <textarea cdkTextareaAutosize>{{output}}</textarea>
+</ng-container>

@@ -1,0 +1,286 @@
+<form>
+  <h1>Candidate Alignment</h1>
+  <mat-card style="padding: 16px;">
+
+    <div style="text-align: center; display: inline-block; line-height: 1.2">
+      <div style="text-align: left; display: inline-block; line-height: 1.2">
+      <br><br>
+
+    <code *ngFor="let x of alignmentService.alignSplit1; let i=index" style="line-height: 1.2; white-space: pre;">
+
+      <span *ngFor="let char of x.split(''); let j=index" 
+        [ngClass]="{'highlight_match':    highlightCandidate && alignmentService.alignMatches[i][j] == '|', 
+                    'highlight_positive': highlightCandidate && alignmentService.alignMatches[i][j] == ':',
+                    'highlight_mismatch': highlightCandidate && alignmentService.alignMatches[i][j] == '.'}">{{alignmentService.alignSplit1[i][j]}}</span>
+    
+      <br>{{alignmentService.alignMatches[i]}}<br>
+
+      <span *ngFor="let char of x.split(''); let j=index" 
+        [ngClass]="{'highlight_match':    highlightCandidate && alignmentService.alignMatches[i][j] == '|', 
+                    'highlight_positive': highlightCandidate && alignmentService.alignMatches[i][j] == ':',
+                    'highlight_mismatch': highlightCandidate && alignmentService.alignMatches[i][j] == '.'}">{{alignmentService.alignSplit2[i][j]}}</span>
+      <br><br><br>
+
+    </code>
+  </div>
+  </div>
+  <button mat-button (click)="toggleCandidate()">Toggle color</button>
+  </mat-card>
+
+  <br>
+
+  <mat-expansion-panel hideToggle>
+    <!-- #enddocregion hide-toggle -->
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Alignment Information
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div style="width: 100%;">
+      <div>
+        <table>
+          <tr>
+            <td>Alignment Algorithm</td>
+            <td>{{getAlgo()}}</td>
+            <td style="width:20px"></td>
+            <td>Sequence 1 Length</td>
+            <td>{{alignmentService.seq1.replace("-","").length}}</td>
+          </tr>
+          <tr>
+            <td>Alignment Type</td>
+            <td>{{getType()}}</td>
+            <td style="width:20px"></td>
+            <td>Sequence 2 Length</td>
+            <td>{{alignmentService.seq2.replace("-","").length}}</td>
+          </tr>
+          <tr>
+            <td>Substitution Matrix</td>
+            <td>{{getSubMatrix()}}</td>
+            <td style="width:20px"></td>
+            <td>Alignment Length</td>
+            <td>{{alignmentService.align1.replace("-","").length}}</td>
+          </tr>
+          <tr>
+            <td>Gap open cost</td>
+            <td>{{alignmentService.go}}</td>
+            <td style="width:20px"></td>
+            <td>Alignment Score</td>
+            <td>{{alignmentService.score}}</td>
+          </tr>
+          <tr>
+            <td>Gap extend cost</td>
+            <td>{{alignmentService.ge}}</td>
+          </tr>
+          <tr style="height: 10px"></tr>
+          <tr>
+            <td>Gaps opened</td>
+            <td>{{alignmentService.gapsOpenend1 + alignmentService.gapsOpenend2}}</td>
+          </tr>
+          <tr>
+            <td>Gaps total</td>
+            <td>{{alignmentService.align1.split("-").length - 1 + alignmentService.align2.split("-").length - 1}}</td>
+          </tr>
+          <tr>
+            <td>Matches</td>
+            <td>{{alignmentService.totalMatches}}</td>
+          </tr>
+          <tr>
+            <td>Correct Matches</td>
+            <td>{{alignmentService.correctMatches}}</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+    <br>
+    <a mat-button (click)="showFixpoint()" style="width: 100%">Show Fixpoint matrix</a>
+    <button mat-button (click)="downloadCandidate()" style="width: 100%">Download Candidate</button>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Full Traceback Matrix
+      </mat-panel-title>
+      <mat-panel-description>
+        WARNING: Long sequences may take a while to load
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <button mat-button (click)="toggleScore()" style="width: 100%">Toggle Show Matrix</button>
+    <br>
+    <div style="overflow-x: auto; max-height: 750px; overflow-y: scroll;">
+      <table style="border-collapse: collapse;" *ngIf="this.showScore">
+        <tbody>
+        <tr *ngFor="let row of alignmentService.tracebackMatrix; let i=index">
+          <td *ngFor="let cell of row; let j=index"
+              [ngClass]="{'highlight': isTraceback(i,j)}"
+              style="border: 1px solid black; padding: 5px; font-size: 10px; text-align: center; min-width: 20px;">{{cell / 100}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <button mat-button (click)="downloadScore()" style="width: 100%">Download Matrix</button>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel *ngIf="alignmentService.deletionMatrixGotoh.length != 0" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Full Deletion Matrix
+      </mat-panel-title>
+      <mat-panel-description>
+        WARNING: Long sequences may take a while to load
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <button mat-button (click)="toggleDeletion()" style="width: 100%">Toggle Show Matrix</button>
+    <br>
+    <div style="overflow-x: auto; max-height: 750px; overflow-y: scroll;" >
+      <table style="border-collapse: collapse;" *ngIf="this.showDeletion">
+        <tbody>
+        <tr *ngFor="let row of alignmentService.deletionMatrixGotoh; let i=index">
+          <td *ngFor="let cell of row; let j=index"
+              style="border: 1px solid black; padding: 5px; font-size: 10px; text-align: center; min-width: 20px;">{{cell == -1073741824 ? "-inf" : cell / 100}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <button mat-button (click)="downloadDeletion()" style="width: 100%">Download Matrix</button>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel *ngIf="alignmentService.insertionMatrixGotoh.length != 0" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Full Insertion Matrix
+      </mat-panel-title>
+      <mat-panel-description>
+        WARNING: Long sequences may take a while to load
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <button mat-button (click)="toggleInsertion()" style="width: 100%">Toggle Show Matrix</button>
+    <br>
+    <div style="overflow-x: auto; max-height: 750px; overflow-y: scroll;">
+      <table style="border-collapse: collapse;" *ngIf="this.showInsertion">
+        <tbody>
+        <tr *ngFor="let row of alignmentService.insertionMatrixGotoh; let i=index">
+          <td *ngFor="let cell of row; let j=index"
+              style="border: 1px solid black; padding: 5px; font-size: 10px; text-align: center; min-width: 20px;">{{cell == -1073741824 ? "-inf" : cell / 100}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <button mat-button (click)="downloadInsertion()" style="width: 100%">Download Matrix</button>
+  </mat-expansion-panel>
+
+  <br>
+
+  <h1>Reference Alignment</h1>
+
+  <mat-card style="padding: 16px;">
+
+    <div style="text-align: center; display: inline-block; line-height: 1.2">
+      <div style="text-align: left; display: inline-block; line-height: 1.2">
+      <br><br>
+
+    <code *ngFor="let x of alignmentService.referenceSplit1; let i=index" style="line-height: 1.2; white-space: pre;">
+
+      <span *ngFor="let char of x.split(''); let j=index" 
+        [ngClass]="{'highlight_match':    highlightReference && alignmentService.referenceMatches[i][j] == '|', 
+                    'highlight_positive': highlightReference && alignmentService.referenceMatches[i][j] == ':',
+                    'highlight_mismatch': highlightReference && alignmentService.referenceMatches[i][j] == '.'}">{{alignmentService.referenceSplit1[i][j]}}</span>
+    
+      <br>{{alignmentService.referenceMatches[i]}}<br>
+
+      <span *ngFor="let char of x.split(''); let j=index" 
+        [ngClass]="{'highlight_match':    highlightReference && alignmentService.referenceMatches[i][j] == '|', 
+                    'highlight_positive': highlightReference && alignmentService.referenceMatches[i][j] == ':',
+                    'highlight_mismatch': highlightReference && alignmentService.referenceMatches[i][j] == '.'}">{{alignmentService.referenceSplit2[i][j]}}</span>
+      <br><br><br>
+
+    </code>
+  </div>
+  </div>
+  <button mat-button (click)="toggleReference()">Toggle color</button>
+  </mat-card>
+
+  <br>
+
+  <mat-expansion-panel hideToggle>
+    <!-- #enddocregion hide-toggle -->
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Reference Information
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <table>
+      <tr>
+        <td>Sensitivity</td>
+        <td>{{alignmentService.sensitivity.toFixed(4)}}</td>
+      </tr>
+      <tr>
+        <td>Specificity</td>
+        <td>{{alignmentService.specificity.toFixed(4)}}</td>
+      </tr>
+      <tr>
+        <td>Coverage</td>
+        <td>{{alignmentService.coverage.toFixed(4)}}</td>
+      </tr>
+      <tr style="height: 10px"></tr>
+      <tr>
+        <td>Mean Shift Error</td>
+        <td>{{alignmentService.MSE.toFixed(4)}}</td>
+      </tr>
+      <tr>
+        <td>Inverse Mean Shift Error</td>
+        <td>{{alignmentService.invMSE.toFixed(4)}}</td>
+      </tr>
+
+    </table>
+
+    <button mat-button (click)="downloadReference()" style="width: 100%">Download Reference</button>
+  </mat-expansion-panel>
+
+  <br>
+
+  <mat-expansion-panel hideToggle>
+    <!-- #enddocregion hide-toggle -->
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Legend
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <table>
+      <tr>
+        <td><span class="highlight_match">|</span></td>
+        <td>Sequence Match</td>
+      </tr>
+      <tr>
+        <td><span class="highlight_positive">:</span></td>
+        <td>Mismatch with positive value</td>
+      </tr>
+      <tr>
+        <td><span class="highlight_mismatch">.</span></td>
+        <td>Mismatch with negative value</td>
+      </tr>
+
+    </table>
+    
+  </mat-expansion-panel>
+
+
+</form>

@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+
+    <div style="display: grid; grid-template-columns: 60% 40%; grid-template-rows: repeat(2, 1fr); grid-gap: 10px; width: 100%;">
+        <div>
+            <mat-form-field appearance="fill" style="width: 100%">
+                <mat-label>Alignment Algorithm</mat-label>
+                <select matNativeControl required formControlName="alignAlgo">
+                    <option value="nwsw">Needleman-Wunsch (Smith-Waterman)</option>
+                    <option value="gotoh">Gotoh</option>
+                </select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" style="width: 100%">
+                <mat-label>Type of Alignment</mat-label>
+                <select matNativeControl required formControlName="alignMode">
+                    <option value="global">Global</option>
+                    <option value="local">Local</option>
+                    <option value="freeshift">Freeshift</option>
+                </select>
+            </mat-form-field>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(1, 1fr); grid-gap: 10px;">
+            
+                <mat-form-field style="width: 100%">
+                    <mat-label>Gap Open</mat-label>
+                    <input matInput placeholder="New gap cost" required formControlName="go">
+                </mat-form-field>
+            
+                <mat-form-field style="width: 100%">
+                    <mat-label>Gap Extend</mat-label>
+                    <input matInput placeholder="Gap extention cost" required formControlName="ge">
+                </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" style="width: 100%">
+                <mat-label>Substitution Matrix</mat-label>
+                <select matNativeControl required formControlName="subMatrix">
+                    <option value="bc">Blake Cohen</option>
+                    <option value="blos">BLOSUM62</option>
+                    <option value="dayh">Dayhoff</option>
+                    <option value="pam">PAM250</option>
+                </select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <button color="primary" mat-flat-button type="submit" (click)="submit()">SUBMIT</button>
+
+</form>

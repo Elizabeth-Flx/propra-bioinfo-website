@@ -1,0 +1,40 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="SwissProt">
+    <div class="task-container">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            AC Search
+          </mat-expansion-panel-header>
+          <app-ac-search></app-ac-search>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            Keyword search
+          </mat-expansion-panel-header>
+          <app-keyword-search></app-keyword-search>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-tab>
+  <mat-tab label="Prosite">
+    <div class="task-container">
+      <app-prosite></app-prosite>
+    </div>
+  </mat-tab>
+  <mat-tab label="DNA 2 RNA">
+    <div class="task-container">
+      <app-dna2rna></app-dna2rna>
+    </div>
+  </mat-tab>
+  <mat-tab label="Genome report">
+    <div class="task-container">
+      <app-genome-report></app-genome-report>
+    </div>
+  </mat-tab>
+  <mat-tab label="Homstrad">
+    <div class="task-container">
+      <app-homstrad></app-homstrad>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,25 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <h1>Input</h1>
+    <button class="row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+
+  <div class="flex-row">
+    <h2 style="margin-right: 10px">Fasta file</h2>
+    <input (change)="fastaChange($event)" formControlName="fasta" type="file">
+  </div>
+
+  <div class="flex-row">
+    <h2 style="margin-right: 10px">Feature file</h2>
+    <input (change)="featuresChange($event)" formControlName="features" type="file">
+  </div>
+</form>
+<ng-container *ngIf="($output | async) as results">
+  <div class="flex-row">
+    <h1>Output</h1>
+    <button (click)="download(results, 'peptideSequences')" class="row-end" color="accent" mat-flat-button>
+      Download
+    </button>
+  </div>
+  <textarea cdkTextareaAutosize>{{results}}</textarea>
+</ng-container>

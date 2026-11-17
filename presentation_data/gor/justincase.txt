@@ -1,0 +1,2 @@
+UniProt ID: A0JP26
+Database id: 1bgxt

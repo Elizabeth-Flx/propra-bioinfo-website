@@ -1,0 +1,37 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <h2>Input</h2>
+    <button class="form-control row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+  <br>
+  <mat-form-field appearance="fill" class="example-chip-list" style="width: 100%">
+    <mat-label>IDs</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Add ids">
+      <mat-chip-row
+        (removed)="remove(id)"
+        *ngFor="let id of getids()">
+        {{id}}
+        <button [attr.aria-label]="'remove ' + id" matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+      <input (matChipInputTokenEnd)="add($event)"
+             [matChipInputAddOnBlur]="true"
+             [matChipInputFor]="chipGrid"
+             placeholder="Add ids"/>
+    </mat-chip-grid>
+  </mat-form-field>
+  <mat-form-field style="width: 300px">
+    <mat-label>Select File</mat-label>
+    <mat-select formControlName="input_file">
+      <mat-label>Select File</mat-label>
+      <mat-option value="/mnt/biocluster/praktikum/bioprakt/Data/DSSP">
+        Read from DSSP
+      </mat-option>
+      <mat-option value="/mnt/biocluster/praktikum/bioprakt/Data/GOR/CB513/CB513DSSP.db">
+        Read from DB
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>If IDs can not be found in local DSSP or DB then the sequence will be retrieved from PDB</p>
+</form>

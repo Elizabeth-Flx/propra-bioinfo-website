@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+    <div class="flex-row">
+        <h1 id="test">Input</h1>
+        <button class="row-end" color="primary" mat-flat-button type="submit" (click)="submit()">SUBMIT</button>
+    </div>
+
+    <mat-tab-group (selectedTabChange)="onSelectedTabChange($event)">
+        <mat-tab value="use-pasted" label="Paste sequences as text">
+            <div class="task-container" style="padding-top: 10px">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Paste Sequence 1 as text</mat-label>
+                    <textarea formControlName="plain1" matInput placeholder="Paste Sequence"></textarea>
+                </mat-form-field>
+                <mat-form-field style="width: 100%">
+                    <mat-label>Paste Sequence 2 as text</mat-label>
+                    <textarea formControlName="plain2" matInput placeholder="Paste Sequence"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-tab>
+        <mat-tab value="use-fasta" label="Upload sequences as fasta">
+            <div class="task-container" style="width: 100%">
+                <h1>Upload Fasta here</h1>
+                <input type="file" (change)="fileChange($event)" formControlName="fasta">
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</form>

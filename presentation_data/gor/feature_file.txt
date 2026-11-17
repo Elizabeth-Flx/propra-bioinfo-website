@@ -1,0 +1,139 @@
+# feature	class	assembly	assembly_unit	seq_type	chromosome	genomic_accession	start	end	strand	product_accession	non-redundant_refseq	related_accession	name	symbol	GeneID	locus_tag	feature_interval_length	product_length	attributes
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	25	711	-							QR62_RS00005	687		old_locus_tag=QR62_00005
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	25	711	-	WP_001223132.1	WP_001223132.1		tRNA/rRNA methyltransferase			QR62_RS00005	687	228	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	1111	1251	-							QR62_RS00010	141		old_locus_tag=QR62_00010
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	1111	1251	-	WP_001303782.1	WP_001303782.1		hypothetical protein			QR62_RS00010	141	46	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	1347	2063	+					arcA		QR62_RS00015	717		old_locus_tag=QR62_00015
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	1347	2063	+	WP_001194358.1	WP_001194358.1		two-component system response regulator ArcA	arcA		QR62_RS00015	717	238	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	2123	3475	-					creD		QR62_RS00020	1353		old_locus_tag=QR62_00020
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	2123	3475	-	WP_000920294.1	WP_000920294.1		cell envelope integrity protein CreD	creD		QR62_RS00020	1353	450	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	3533	4957	-					creC		QR62_RS00025	1425		old_locus_tag=QR62_00025
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	3533	4957	-	WP_001219577.1	WP_001219577.1		two-component system sensor histidine kinase CreC	creC		QR62_RS00025	1425	474	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	4957	5646	-					creB		QR62_RS00030	690		old_locus_tag=QR62_00030
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	4957	5646	-	WP_001188654.1	WP_001188654.1		two-component system response regulator CreB	creB		QR62_RS00030	690	229	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	5659	6132	-					creA		QR62_RS00035	474		old_locus_tag=QR62_00035
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	5659	6132	-	WP_000875487.1	WP_000875487.1		protein CreA	creA		QR62_RS00035	474	157	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	6343	7212	+					robA		QR62_RS00040	870		old_locus_tag=QR62_00040
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	6343	7212	+	WP_000371666.1	WP_000371666.1		MDR efflux pump AcrAB transcriptional activator RobA	robA		QR62_RS00040	870	289	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	7209	7856	-					gpmB		QR62_RS00045	648		old_locus_tag=QR62_00045
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	7209	7856	-	WP_000942344.1	WP_000942344.1		2,3-diphosphoglycerate-dependent phosphoglycerate mutase GpmB	gpmB		QR62_RS00045	648	215	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	7908	8420	+					yjjX		QR62_RS00050	513		old_locus_tag=QR62_00050
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	7908	8420	+	WP_001338221.1	WP_001338221.1		inosine/xanthosine triphosphatase	yjjX		QR62_RS00050	513	170	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	8567	8893	-					trpR		QR62_RS00055	327		old_locus_tag=QR62_00055
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	8567	8893	-	WP_000068679.1	WP_000068679.1		trp operon repressor	trpR		QR62_RS00055	327	108	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	8983	10920	-					sltY		QR62_RS00060	1938		old_locus_tag=QR62_00060
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	8983	10920	-	WP_000409451.1	WP_000409451.1		murein transglycosylase	sltY		QR62_RS00060	1938	645	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	11131	12798	+					ettA		QR62_RS00065	1668		old_locus_tag=QR62_00065
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	11131	12798	+	WP_000046749.1	WP_000046749.1		energy-dependent translational throttle protein EttA	ettA		QR62_RS00065	1668	555	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	12905	13072	-							QR62_RS25990	168		old_locus_tag=QR62_00070
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	12905	13072	-	WP_000007444.1	WP_000007444.1		hypothetical protein			QR62_RS25990	168	55	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	13106	14338	-					nadR		QR62_RS00075	1233		old_locus_tag=QR62_00075
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	13106	14338	-	WP_000093814.1	WP_000093814.1		multifunctional transcriptional regulator/nicotinamide-nucleotide adenylyltransferase/ribosylnicotinamide kinase NadR	nadR		QR62_RS00075	1233	410	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	14359	15741	-					radA		QR62_RS00080	1383		old_locus_tag=QR62_00080
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	14359	15741	-	WP_001029687.1	WP_001029687.1		DNA repair protein RadA	radA		QR62_RS00080	1383	460	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	15790	16758	-					serB		QR62_RS00085	969		old_locus_tag=QR62_00085
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	15790	16758	-	WP_001132955.1	WP_001132955.1		phosphoserine phosphatase	serB		QR62_RS00085	969	322	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	16864	17508	+							QR62_RS00090	645		old_locus_tag=QR62_00090
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	16864	17508	+	WP_000124615.1	WP_000124615.1		YtjB family periplasmic protein			QR62_RS00090	645	214	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	17536	18552	+					lplA		QR62_RS00095	1017		old_locus_tag=QR62_00095
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	17536	18552	+	WP_000105884.1	WP_000105884.1		lipoate--protein ligase LplA	lplA		QR62_RS00095	1017	338	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	18553	19884	-					yjjJ		QR62_RS00100	1332		old_locus_tag=QR62_00100
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	18553	19884	-	WP_001293115.1	WP_001293115.1		type II toxin-antitoxin system HipA family toxin YjjJ	yjjJ		QR62_RS00100	1332	443	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	20051	20770	-					deoD		QR62_RS00105	720		old_locus_tag=QR62_00105
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	20051	20770	-	WP_000224877.1	WP_000224877.1		purine-nucleoside phosphorylase	deoD		QR62_RS00105	720	239	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	20827	22050	-					deoB		QR62_RS00110	1224		old_locus_tag=QR62_00110
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	20827	22050	-	WP_000816471.1	WP_000816471.1		phosphopentomutase	deoB		QR62_RS00110	1224	407	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	22102	23424	-					deoA		QR62_RS00115	1323		old_locus_tag=QR62_00115
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	22102	23424	-	WP_000477807.1	WP_000477807.1		thymidine phosphorylase	deoA		QR62_RS00115	1323	440	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	23551	24330	-					deoC		QR62_RS00120	780		old_locus_tag=QR62_00120
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	23551	24330	-	WP_001298497.1	WP_001298497.1		deoxyribose-phosphate aldolase	deoC		QR62_RS00120	780	259	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	24588	26138	+							QR62_RS00130	1551		old_locus_tag=QR62_00130
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	24588	26138	+	WP_001143253.1	WP_001143253.1		YjjI family glycine radical enzyme			QR62_RS00130	1551	516	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	26110	26973	+							QR62_RS00135	864		old_locus_tag=QR62_00135
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	26110	26973	+	WP_001088415.1	WP_001088415.1		YjjW family glycine radical enzyme activase			QR62_RS00135	864	287	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	27393	28172	-							QR62_RS00140	780		old_locus_tag=QR62_00140
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	27393	28172	-	WP_000563040.1	WP_000563040.1		metal-dependent hydrolase			QR62_RS00140	780	259	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	28169	29242	-							QR62_RS00145	1074		old_locus_tag=QR62_00145
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	28169	29242	-	WP_001299799.1	WP_001299799.1		patatin family protein			QR62_RS00145	1074	357	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	29364	29525	-							QR62_RS00150	162		old_locus_tag=QR62_00150
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	29364	29525	-	WP_000490275.1	WP_000490275.1		DUF1328 domain-containing protein			QR62_RS00150	162	53	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	29652	30257	-					osmY		QR62_RS00155	606		old_locus_tag=QR62_00155
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	29652	30257	-	WP_001295748.1	WP_001295748.1		molecular chaperone OsmY	osmY		QR62_RS00155	606	201	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	30650	32239	-					prfC		QR62_RS00160	1590		old_locus_tag=QR62_00160
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	30650	32239	-	WP_000175940.1	WP_000175940.1		peptide chain release factor 3	prfC		QR62_RS00160	1590	529	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	32330	33007	-					yjjG		QR62_RS00165	678		old_locus_tag=QR62_00165
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	32330	33007	-	WP_000870710.1	WP_000870710.1		pyrimidine 5'-nucleotidase	yjjG		QR62_RS00165	678	225	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	33022	33468	-					rimI		QR62_RS00170	447		old_locus_tag=QR62_00170
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	33022	33468	-	WP_001092461.1	WP_001092461.1		ribosomal protein S18-alanine N-acetyltransferase	rimI		QR62_RS00170	447	148	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	33437	33850	-					holD		QR62_RS00175	414		old_locus_tag=QR62_00175
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	33437	33850	-	WP_000204012.1	WP_000204012.1		DNA polymerase III subunit psi	holD		QR62_RS00175	414	137	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	33953	34984	+					rsmC		QR62_RS00180	1032		old_locus_tag=QR62_00180
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	33953	34984	+	WP_001272330.1	WP_001272330.1		16S rRNA (guanine(1207)-N(2))-methyltransferase RsmC	rsmC		QR62_RS00180	1032	343	
+gene	tRNA	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35252	35338	+							QR62_RS00185	87		old_locus_tag=QR62_00185
+tRNA		GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35252	35338	+				tRNA-Leu			QR62_RS00185	87		anticodon=CAG
+gene	tRNA	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35367	35453	+							QR62_RS00190	87		old_locus_tag=QR62_00190
+tRNA		GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35367	35453	+				tRNA-Leu			QR62_RS00190	87		anticodon=CAG
+gene	tRNA	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35488	35574	+							QR62_RS00195	87		old_locus_tag=QR62_00195
+tRNA		GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35488	35574	+				tRNA-Leu			QR62_RS00195	87		anticodon=CAG
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35613	35849	-							QR62_RS00200	237		old_locus_tag=QR62_00200
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35613	35849	-	WP_001393508.1	WP_001393508.1		DUF1435 domain-containing protein			QR62_RS00200	237	78	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35990	36778	+					fhuF		QR62_RS00205	789		old_locus_tag=QR62_00205
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	35990	36778	+	WP_000331618.1	WP_000331618.1		siderophore-iron reductase FhuF	fhuF		QR62_RS00205	789	262	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	36816	37493	-					bglJ		QR62_RS00210	678		old_locus_tag=QR62_00210
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	36816	37493	-	WP_001301727.1	WP_001301727.1		DNA-binding transcriptional activator BglJ	bglJ		QR62_RS00210	678	225	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	37451	38176	-							QR62_RS00215	726		old_locus_tag=QR62_00215
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	37451	38176	-	WP_000936635.1	WP_000936635.1		response regulator transcription factor			QR62_RS00215	726	241	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	38795	39565	+							QR62_RS00220	771		old_locus_tag=QR62_00220
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	38795	39565	+	WP_001338213.1	WP_001338213.1		threonine/serine exporter ThrE family protein			QR62_RS00220	771	256	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	39556	40029	+							QR62_RS00225	474		old_locus_tag=QR62_00225
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	39556	40029	+	WP_000538191.1	WP_000538191.1		threonine/serine exporter			QR62_RS00225	474	157	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	40136	40675	+					dnaT		QR62_RS00230	540		old_locus_tag=QR62_00230
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	40136	40675	+	WP_000098818.1	WP_000098818.1		primosomal protein DnaT	dnaT		QR62_RS00230	540	179	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	40678	41415	+					dnaC		QR62_RS00235	738		old_locus_tag=QR62_00235
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	40678	41415	+	WP_000799911.1	WP_000799911.1		DNA replication protein DnaC	dnaC		QR62_RS00235	738	245	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	41464	41958	+							QR62_RS00240	495		old_locus_tag=QR62_00240
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	41464	41958	+	WP_001308243.1	WP_001308243.1		DUF2501 domain-containing protein			QR62_RS00240	495	164	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	42212	44503	+					opgB		QR62_RS00245	2292		old_locus_tag=QR62_00245
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	42212	44503	+	WP_001292679.1	WP_001292679.1		phosphatidylglycerol--membrane-oligosaccharide glycerophosphotransferase	opgB		QR62_RS00245	2292	763	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	44641	45663	-					lgoD		QR62_RS00250	1023		old_locus_tag=QR62_00250
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	44641	45663	-	WP_000106030.1	WP_000106030.1		L-galactonate oxidoreductase	lgoD		QR62_RS00250	1023	340	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	45802	46716	+							QR62_RS00255	915		old_locus_tag=QR62_00255
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	45802	46716	+	WP_000091570.1	WP_000091570.1		GntR family transcriptional regulator			QR62_RS00255	915	304	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	46931	48292	+							QR62_RS00260	1362		old_locus_tag=QR62_00260
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	46931	48292	+	WP_000410113.1	WP_000410113.1		MFS transporter			QR62_RS00260	1362	453	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	48341	49996	-					tsr		QR62_RS00265	1656		old_locus_tag=QR62_00265
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	48341	49996	-	WP_000919536.1	WP_000919536.1		methyl-accepting chemotaxis protein	tsr		QR62_RS00265	1656	551	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	50374	52524	+					btsT		QR62_RS00275	2151		old_locus_tag=QR62_00275
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	50374	52524	+	WP_001299714.1	WP_001299714.1		pyruvate/proton symporter BtsT	btsT		QR62_RS00275	2151	716	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	52574	52777	+							QR62_RS00280	204		old_locus_tag=QR62_00280
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	52574	52777	+	WP_000467859.1	WP_000467859.1		YbdD/YjiX family protein			QR62_RS00280	204	67	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	52788	53744	+					yjiA		QR62_RS00285	957		old_locus_tag=QR62_00285
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	52788	53744	+	WP_001312515.1	WP_001312515.1		GTPase	yjiA		QR62_RS00285	957	318	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	53790	54704	-					mrr		QR62_RS00290	915		old_locus_tag=QR62_00290
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	53790	54704	-	WP_000217931.1	WP_000217931.1		adenine/cytosine-specific restriction endonuclease Mrr	mrr		QR62_RS00290	915	304	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	54892	58404	+					hsdR		QR62_RS00295	3513		old_locus_tag=QR62_00295
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	54892	58404	+	WP_000981388.1	WP_000981388.1		type I restriction-modification system endonuclease	hsdR		QR62_RS00295	3513	1170	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	58605	60194	+					hsdM		QR62_RS00300	1590		old_locus_tag=QR62_00300
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	58605	60194	+	WP_001063204.1	WP_001063204.1		type I restriction-modification system methyltransferase	hsdM		QR62_RS00300	1590	529	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	60191	61585	+					hsdS		QR62_RS00305	1395		old_locus_tag=QR62_00305
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	60191	61585	+	WP_001272447.1	WP_001272447.1		type I restriction-modification system specificity subunit	hsdS		QR62_RS00305	1395	464	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	61813	62154	+					symE		QR62_RS00310	342		old_locus_tag=QR62_00310
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	61813	62154	+	WP_000132601.1	WP_000132601.1		endoribonuclease SymE	symE		QR62_RS00310	342	113	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	62316	63695	+					mcrB		QR62_RS00315	1380		old_locus_tag=QR62_00315
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	62316	63695	+	WP_000443951.1	WP_000443951.1		5-methylcytosine-specific restriction endonuclease subunit McrB	mcrB		QR62_RS00315	1380	459	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	63695	64741	+					mcrC		QR62_RS00320	1047		old_locus_tag=QR62_00320
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	63695	64741	+	WP_000437621.1	WP_000437621.1		5-methylcytosine-specific restriction endonuclease system specificity protein McrC	mcrC		QR62_RS00320	1047	348	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	64798	67518	-							QR62_RS00325	2721		old_locus_tag=QR62_00325
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	64798	67518	-	WP_014639049.1	WP_014639049.1		hypothetical protein			QR62_RS00325	2721	906	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	67722	69239	-							QR62_RS00330	1518		old_locus_tag=QR62_00330
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	67722	69239	-	WP_011443605.1	WP_011443605.1		hypothetical protein			QR62_RS00330	1518	505	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	69738	69902	-							QR62_RS00335	165		old_locus_tag=QR62_00335
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	69738	69902	-	WP_000394280.1	WP_000394280.1		DUF1127 domain-containing protein			QR62_RS00335	165	54	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	70079	71491	+							QR62_RS00340	1413		old_locus_tag=QR62_00340
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	70079	71491	+	WP_000199300.1	WP_000199300.1		PLP-dependent aminotransferase family protein			QR62_RS00340	1413	470	
+gene	pseudogene	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	71735	72655	-							QR62_RS00345	921		pseudo;old_locus_tag=QR62_00345
+CDS	without_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	71735	72655	-				Rpn family recombination-promoting nuclease/putative transposase			QR62_RS00345	921		pseudo
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	73134	74366	+					mdtM		QR62_RS00350	1233		old_locus_tag=QR62_00350
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	73134	74366	+	WP_001137036.1	WP_001137036.1		multidrug efflux MFS transporter MdtM	mdtM		QR62_RS00350	1233	410	
+gene	protein_coding	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	74407	75687	+							QR62_RS00355	1281		old_locus_tag=QR62_00355
+CDS	with_protein	GCF_001308125.1	Primary Assembly	chromosome		NZ_CP012869.1	74407	75687	+	WP_001037419.1	WP_001037419.1		DUF445 domain-containing protein			QR62_RS00355	1281	426	

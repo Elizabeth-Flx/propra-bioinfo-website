@@ -1,0 +1,73 @@
+<!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
+  <form [formGroup]="form">
+    <div class="flex-row">
+      <h1>Input</h1>
+    </div>
+  
+    <mat-tab-group (selectedTabChange)="onSelectedTabChange($event)">
+      <mat-tab value="use-uniprot" label="Get from Homstrad" *ngIf="false">
+        <div class ="task-container" style="padding-top: 10px">
+          <mat-form-field style="width: 100%">
+            <mat-label>Homstrad Family Name</mat-label>
+            <input formControlName="homstradFamily" matInput placeholder="Homstrad Family">
+          </mat-form-field>
+          <mat-form-field style="width: 100%">
+            <mat-label>Get Sequence 1 from Homstrad DB</mat-label>
+            <input formControlName="homstradID1" matInput placeholder="Homstrad ID">
+          </mat-form-field>
+          <mat-form-field style="width: 100%">
+            <mat-label>Get Sequence 2 from Homstrad DB</mat-label>
+            <input formControlName="homstradID2" matInput placeholder="Homstrad ID">
+          </mat-form-field>
+          <p>
+            Gets pre-aligned sequences from HOMSTRAD database. The selected sequences will be re-aligned again using the selected parameters.
+            The pre-aligned HOMSTRAD sequences will be used as reference alignment.
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab value="use-our-db" label="Get from Swissprot">
+        <div class="task-container" style="padding-top: 10px">
+          <mat-form-field style="width: 100%">
+            <mat-label>Get Sequence 1 from Swissprot DB</mat-label>
+            <input formControlName="swissID1" matInput placeholder="Swissprot ID">
+          </mat-form-field>
+          <mat-form-field style="width: 100%">
+            <mat-label>Get Sequence 2 from Swissprot DB</mat-label>
+            <input formControlName="swissID2" matInput placeholder="Swissprot ID">
+          </mat-form-field>
+        </div>
+      </mat-tab>
+      <mat-tab value="use-pasted"  label="Paste sequences as text">
+        <div class="task-container" style="padding-top: 10px">
+          <mat-form-field style="width: 100%">
+            <mat-label>Paste Sequence 1 as text</mat-label>
+            <textarea formControlName="plain1" matInput placeholder="Paste Sequence"></textarea>
+          </mat-form-field >
+          <mat-form-field style="width: 100%">
+            <mat-label>Paste Sequence 2 as text</mat-label>
+            <textarea formControlName="plain2" matInput placeholder="Paste Sequence"></textarea>
+          </mat-form-field >
+          <p>
+            You can also enter pre-aligned sequences. The sequences will be re-aligned again using the selected parameters.
+            The pre-aligned sequences will be used as reference alignment.
+          </p>
+        </div>
+      </mat-tab>
+      <mat-tab value="use-fasta" label="Upload sequences as fasta">
+        <div class="task-container" style="width: 100%">
+          <h1>Upload Fasta here</h1>
+          <p>
+            Select fasta file with two sequences. The fasta can also contain pre-aligned sequences. The sequences will be re-aligned again using the selected parameters.
+            The pre-aligned sequences will be used as reference alignment.
+          </p>
+          <input type="file" (change)="fileChange($event)">
+        </div>
+        <br>
+      </mat-tab>
+    </mat-tab-group>
+
+    <button color="primary" mat-flat-button type="submit" (click)="submit()">SUBMIT</button>
+
+  </form>
+  
+  

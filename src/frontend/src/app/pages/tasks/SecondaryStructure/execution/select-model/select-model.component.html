@@ -1,0 +1,26 @@
+<form [formGroup]="form">
+  <mat-tab-group>
+    <mat-tab label="Select one of the Given Models">
+      <div class="task-container">
+        <mat-form-field appearance="fill" style="margin-bottom: 10px">
+          <mat-label>Model File</mat-label>
+          <mat-select (valueChange)="modelChange($event)">
+            <mat-option *ngFor="let model of models" [value]="model.value" formGroupName="name">
+              {{model.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Upload your own Model-File">
+      <div class="task-container">
+        Upload your own Model-file here:
+        <input (change)="fileChange($event)" formControlName="model_file" type="file">
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="flex-row">
+    <button class="form-control" color="primary" mat-flat-button matStepperPrevious>Previous</button>
+    <button class="form-control" color="primary" mat-flat-button matStepperNext>Next</button>
+  </div>
+</form>

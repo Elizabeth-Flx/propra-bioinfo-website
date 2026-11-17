@@ -1,0 +1,42 @@
+<h1>Input</h1>
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <mat-form-field appearance="outline">
+      <mat-label>PDB-ID-1</mat-label>
+      <input formControlName="pdb_id" matInput placeholder="PDB-ID-1">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>PDB-ID-2 (optional)</mat-label>
+      <input formControlName="pdb_id2" matInput placeholder="PDB-ID-2 (optional)">
+    </mat-form-field>
+    <button [disabled]="!has_pdb_id()" class="row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+</form>
+<ng-container *ngIf="($result | async) as output">
+  <div class="flex-row">
+    <h1>Output</h1>
+    <button (click)="download(output)" class="row-end" color="accent" mat-flat-button>Download
+    </button>
+  </div>
+  <div class="flex-row distributed">
+    <p>Legend:</p>
+    <p class="secondary-helix">Helix</p>
+    <p class="secondary-sheet">Sheet</p>
+    <p class="secondary-coil">Coil</p>
+    <p class="secondary-p">P</p>
+    <p class="secondary-none">None</p>
+  </div>
+  <mat-accordion multi>
+    <mat-expansion-panel *ngFor="let family of output">
+      <mat-expansion-panel-header>
+        {{family.name}}
+      </mat-expansion-panel-header>
+      <ng-container *ngFor="let alignmentSequence of family.alignment">
+        <h1>{{alignmentSequence.code}}</h1>
+        <div class="flex-row alignment">
+          <p *ngFor="let letter of getLetters(alignmentSequence)" [ngClass]="letter.styleClass">{{letter.sequence}}</p>
+        </div>
+      </ng-container>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ng-container>

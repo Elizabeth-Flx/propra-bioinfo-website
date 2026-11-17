@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<title>Jmol Molecule</title>
+<head>
+	<script type="text/javascript" src="files/jsmol/JSmol.min.js"></script>
+
+	<script type="text/javascript">
+	var Info = {
+	  	width: 500,
+	  	height: 500,
+	  	j2sPath: "files/jsmol/j2s",
+	}
+	</script>
+</head>
+<body>
+	<h1>Protein: :::PLACEHOLDER:::</h1>
+	<script type="text/javascript">
+	  	jmolApplet0 = Jmol.getApplet("jmolApplet0", Info);
+	  	Jmol.script(jmolApplet0, "load https://files.rcsb.org/view/:::PLACEHOLDER:::.pdb; cartoon only; :::COLOR::: spin on; background black")
+	</script>
+	<br clear="all" / >
+		<b>&nbsp; &nbsp; &nbsp; &nbsp; Spin:</b>
+		<input name="vis" type="radio" onclick="javascript:Jmol.script(jmolApplet0,'spin off; ');" checked="checked">Off</input>
+		<input name="vis" type="radio" onclick="javascript:Jmol.script(jmolApplet0,'spin on; ');">On</input>
+	</br>
+</body>

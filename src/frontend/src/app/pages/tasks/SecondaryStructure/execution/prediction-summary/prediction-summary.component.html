@@ -1,0 +1,72 @@
+<h1 mat-dialog-title>Prediction performance: summary</h1>
+<div mat-dialog-content style="min-width: 400px">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>Q3</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="data.q3"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="data.qPerSS.H as metric">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>Q_H</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="metric"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="data.qPerSS.E as metric">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>Q_E</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="metric"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="data.qPerSS.C as metric">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>Q_C</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="metric"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>SOV</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="data.sov"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="data.sovPerSS.H as metric">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>SOV_H</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="metric"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="data.sovPerSS.E as metric">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>SOV_E</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="metric"></app-metric>
+    </mat-expansion-panel>
+    <mat-expansion-panel *ngIf="data.sovPerSS.C as metric">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>SOV_C</h3>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-metric [metric]="metric"></app-metric>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<div mat-dialog-actions>
+  <button (click)="onClose()" color="primary" mat-flat-button>Close</button>
+</div>

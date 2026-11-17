@@ -1,0 +1,1 @@
+load https://files.rcsb.org/view/1BAF.pdb; cartoon only; select helix; color orange; select sheet; color cyan; write PNG ./molecule.png

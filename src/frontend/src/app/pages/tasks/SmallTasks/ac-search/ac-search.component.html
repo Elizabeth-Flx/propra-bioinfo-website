@@ -1,0 +1,18 @@
+<h1>Get Sequence from UniProt ( With UniProt Accession )</h1>
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <div class="flex-row">
+    <mat-form-field appearance="outline">
+      <mat-label>UniProt AC accession</mat-label>
+      <input #accession formControlName="accession" matInput placeholder="UniProt AC accession">
+    </mat-form-field>
+    <button class="row-end" color="primary" mat-flat-button type="submit">SUBMIT</button>
+  </div>
+</form>
+<ng-container *ngIf="$fasta | async as fasta">
+  <div class="flex-row">
+    <h1>Output</h1>
+    <button (click)="download(fasta, accession.value)" class="row-end" color="accent" mat-flat-button>Download
+    </button>
+  </div>
+  <textarea cdkTextareaAutosize>{{fasta}}</textarea>
+</ng-container>

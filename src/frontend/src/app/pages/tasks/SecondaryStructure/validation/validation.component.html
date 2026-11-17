@@ -1,0 +1,153 @@
+<mat-accordion multi style="margin: 10px">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>K-Fold cross validation</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/q3.png'">
+    <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/sov.png'">
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: H
+      </mat-expansion-panel-header>
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/qH.png'">
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/sovH.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: E
+      </mat-expansion-panel-header>
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/qE.png'">
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/sovE.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: C
+      </mat-expansion-panel-header>
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/qC.png'">
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/k_fold/sovC.png'">
+    </mat-expansion-panel>
+
+
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Comparison with test set</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/q3.png'">
+    <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/sov.png'">
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: H
+      </mat-expansion-panel-header>
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/qH.png'">
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/sovH.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: E
+      </mat-expansion-panel-header>
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/qE.png'">
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/sovE.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: C
+      </mat-expansion-panel-header>
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/qC.png'">
+      <img [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test/sovC.png'">
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Inverted comparison with test set</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <img
+      [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/q3.png'">
+    <img
+      [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/sov.png'">
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: H
+      </mat-expansion-panel-header>
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/qH.png'">
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/sovH.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: E
+      </mat-expansion-panel-header>
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/qE.png'">
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/sovE.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: C
+      </mat-expansion-panel-header>
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/qC.png'">
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/test_inverted/sovC.png'">
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Comparison with PSIPRED</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <img
+      [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/q3.png'">
+    <img
+      [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/sov.png'">
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: H
+      </mat-expansion-panel-header>
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/qH.png'">
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/sovH.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: E
+      </mat-expansion-panel-header>
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/qE.png'">
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/sovE.png'">
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Secondary structure: C
+      </mat-expansion-panel-header>
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/qC.png'">
+      <img
+        [src]="API_URL+'tasks-sheet3/SecondaryStructurePrediction/src/main/python/Validation/plots/psipred_comparison/sovC.png'">
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,8 @@
+<div class="label-container">
+<label class="slider-value-label" *ngIf="valueName">{{valueName}}</label>
+<label class="slider-value" *ngIf="!valueName">Value</label>
+</div>
+<label class="slider-value">{{value}}</label>
+<mat-slider [min]="min" [max]="max" [step]="1" >
+  <input matSliderThumb (ngModelChange)="$subject.next($event)" [ngModel]="value" [value]="value">
+</mat-slider>

@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "mysql2-ext.bio.ifi.lmu.de",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "ProPra",
+            "database": "bioprakt13",
+            "username": "bioprakt13"
+        }
+    ]
+}

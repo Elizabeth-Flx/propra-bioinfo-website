@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Train" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="org.propra13.Train" />
+    <module name="SecondaryStructurePrediction" />
+    <option name="PROGRAM_PARAMETERS" value="--db data/CB513DSSP.db --method gor4 --model model.tsv" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.propra13.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

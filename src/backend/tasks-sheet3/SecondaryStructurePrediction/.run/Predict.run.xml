@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Predict" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="org.propra13.Predict" />
+    <module name="SecondaryStructurePrediction" />
+    <option name="PROGRAM_PARAMETERS" value="--model model.tsv --format html --seq data/CB513.fasta --probabilities" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.propra13.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

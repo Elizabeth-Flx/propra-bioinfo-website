@@ -1,0 +1,30 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <mat-tab-group (selectedTabChange)="onSelectedTabChange($event)">
+    <mat-tab label="Get from our Database" value="use-our-db">
+      <div class="task-container" style="padding-top: 10px">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Get Sequence from our Database</mat-label>
+          <input formControlName="seqfromid" matInput placeholder="Sequence-ID">
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Paste sequences as text" value="use-pasted">
+      <div class="task-container">
+        <mat-form-field style="width: 100%">
+          <mat-label>Paste Sequences as text</mat-label>
+          <textarea formControlName="pasted" matInput placeholder="Paste Sequence"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Upload sequences as fasta" value="use-fasta">
+      <div class="task-container" style="width: 100%">
+        <h1>Upload Fasta here</h1>
+        <input (change)="fileChange($event)" formControlName="fasta" type="file">
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="flex-row">
+    <button class="form-control" color="primary" mat-flat-button matStepperPrevious>Previous</button>
+    <button class="form-control" color="primary" mat-flat-button matStepperNext type="submit">Next</button>
+  </div>
+</form>

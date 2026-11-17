@@ -1,0 +1,91 @@
+<ng-container *ngIf="resultWithColor as results">
+  <mat-expansion-panel *ngFor="let result of results">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span>{{result.name}}</span>
+      </mat-panel-title>
+      <mat-panel-description>
+        <span> Show result </span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <h3 style="font-weight: bolder">Prediction Secondary Structure and Reference Secondary Structure</h3>
+      <div class="flex-row">
+        <div class="monospaced">
+          <p>AA</p>
+          <p>PS</p>
+          <p *ngIf="result.reference">SS</p>
+          <p>PH</p>
+          <p>PE</p>
+          <p>PC</p>
+        </div>
+        <div class="show-overflow">
+          <div class="flex-row monospaced">
+            <p *ngFor="let position of result.color" [style]="position.color">
+              {{position.aminoAcid}}
+            </p>
+          </div>
+          <div class="flex-row monospaced">
+            <p *ngFor="let letter of getLetters(result.prediction)" [ngClass]="letter.styleClass">
+              {{letter.sequence}}
+            </p>
+          </div>
+          <div *ngIf="result.reference as reference" class="flex-row monospaced">
+            <p *ngFor="let letter of getLetters(reference)" [ngClass]="letter.styleClass">
+              {{letter.sequence}}
+            </p>
+          </div>
+          <p class="monospaced nobr">
+            {{getProbabilitySequence(result.probabilities)[0]}}
+          </p>
+          <p class="monospaced nobr">
+            {{getProbabilitySequence(result.probabilities)[1]}}
+          </p>
+          <p class="monospaced nobr">
+            {{getProbabilitySequence(result.probabilities)[2]}}
+          </p>
+        </div>
+      </div>
+      <mat-expansion-panel *ngIf="result.q3">
+        <mat-expansion-panel-header>Validation</mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <table>
+            <tr *ngIf="result.q3 as value">
+              <th>Q3</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.qH as value">
+              <th>Q_H</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.qE as value">
+              <th>Q_E</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.qC as value">
+              <th>Q_C</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.sov as value">
+              <th>SOV</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.sovH as value">
+              <th>SOV_H</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.sovE as value">
+              <th>SOV_E</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+            <tr *ngIf="result.sovC as value">
+              <th>SOV_C</th>
+              <td>{{value | number : '1.2-2'}}</td>
+            </tr>
+          </table>
+        </ng-template>
+      </mat-expansion-panel>
+    </ng-template>
+  </mat-expansion-panel>
+</ng-container>
+

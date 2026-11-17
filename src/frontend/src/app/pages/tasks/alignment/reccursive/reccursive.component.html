@@ -1,0 +1,47 @@
+<div class="container">
+
+    <h2>Verringerte Laufzeit</h2>
+    <p>Bei Dynamic Programming (DP) wird die Aufgabe in Subprobleme aufgespalten und die Lösungen einzelner Subprobleme abgespeichert, sodass die Berechnung des jeweiligen Subproblems anschließend nicht mehr vorgenommen werden muss. Durch die gesparten doppelten Berechnungen wird die Laufzeit verringert.</p>
+  
+    <h2>Speichereffizienz</h2>
+    <p>Bei DP wird zwar mehr Speicherplatz für die Speicherungen der einzelnen Berechnungen verwendet, jedoch kann somit auch Speicherung redundanter Berechnungen vermieden werden und somit wird die Speicherplatznutzung effizienter gemacht.</p>
+  
+    <h2>Größere Probleme lösen</h2>
+    <p>Durch die bessere Laufzeit ist es mit DP möglich, größere Probleme zu lösen, die aufgrund der exponentiellen Komplexität der Laufzeit von simple recursion Implementierungen mit diesen nicht möglich wären.</p>
+  
+    <h2>Laufzeitanalysen:</h2>
+    <ul>
+      <li>Laufzeit rek: 3<sup>n</sup>; n = seq.length()</li>
+      <li>Laufzeit dp: O(n*m); n = seq1.length(); m = seq2.length()</li>
+    </ul>
+  
+    <h3>Beispiel:</h3>
+    <p>n = 10, Anzahl_Tests = 500</p>
+    <ul>
+      <li>Total time dynamic: 18ms</li>
+      <li>Total time recursive: 31095ms</li>
+      <li>Average time dynamic: 0.036ms</li>
+      <li>Average time recursive: 62ms</li>
+    </ul>
+    <p>Wie bereits erwartet ist die Laufzeit von DP deutlich schneller.</p>
+    <p>Bei n = 30:</p>
+    <ul>
+      <li>Recursive: ~2*10<sup>14</sup> Vergleiche</li>
+      <li>Dynamisch: ~900 Vergleiche</li>
+    </ul>
+    <p>Somit ist es zur Erforschung von Sequenzen in der biologischen Forschung nicht von Nutzen, eine recursive Implementierung zu benutzen, da meist mit Sequenzen mit einer Länge von deutlich über 30 AA gearbeitet werden.</p>
+  
+    <img src="http://bioclient1.bio.ifi.lmu.de/~trummer/propra/src/backend/tasks-sheet3/alignment_website/plots/Recursive_Dynamic_Runtime.png" style="width: 100%; height: auto">
+
+    <h2>CPU</h2>
+    <p>n = 12, Anzahl_Tests = 500:</p>
+    <h3>Recursive:</h3>
+    <ul>
+      <li>Max CPU usage: 65.7%</li>
+    </ul>
+    <h3>Dynamic:</h3>
+    <ul>
+      <li>Max CPU usage: 2.9%</li>
+    </ul>
+</div>
+  

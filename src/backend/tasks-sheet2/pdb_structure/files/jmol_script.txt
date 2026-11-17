@@ -1,0 +1,1 @@
+load https://files.rcsb.org/view/256b.pdb; cartoon only; select helix; color orange; select sheet; color cyan; write PNG ./test_images/256b.png
